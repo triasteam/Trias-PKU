@@ -1,2 +1,2 @@
 # Trias-PKU
-Trias-PKU
+how to use readme
