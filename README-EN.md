@@ -1,6 +1,5 @@
 # School of Software and Microelectronics Peking University and Octa Company - Open source security community for cryptography and its blockchain applications   
-#### [中文版文档](https://github.com/triasteam/Trias-PKU/blob/master/README.md)   |   [English Docs](https://github.com/triasteam/Tria
-s-PKU/blob/master/README-EN.md)
+#### [中文版文档](https://github.com/triasteam/Trias-PKU/blob/master/README.md)   |   [English Docs](https://github.com/triasteam/Trias-PKU/blob/master/README-EN.md)
 
 ## Project Introduction   
 This project, relying on the background of Peking University Soft Micro School and Octa company, makes a thorough study of cryptography related principles, and studies the security application of cryptography in block chains.
