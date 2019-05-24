@@ -1,5 +1,5 @@
 # 北大软微学院-八分量 密码及其区块链应用之开源安全社区
-#### [中文版文档](https://github.com/trias-lab/Trias-Raft/blob/master/README.md)   |   [English Docs](https://github.com/trias-lab/Trias-Raft/blob/master/README-EN.MD)
+#### [中文版文档](https://github.com/triasteam/Trias-PKU/blob/master/README.md)   |   [English Docs](https://github.com/triasteam/Trias-PKU/blob/master/README-EN.md)
 
 ## 项目介绍
 本项目，依托背景北京大学软微学院和八分量公司，对密码学相关原理进行深入研究，对密码学在区块链中的安全应用进行研究。  
