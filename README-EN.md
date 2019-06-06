@@ -1,4 +1,5 @@
-# School of Software and Microelectronics Peking University and Octa Company - Open source security community for cryptography and its blockchain applications   
+#PKUSSM-Octa Innovation Lab - Open source security community for cryptography and its blockchain applications   
+
 #### [中文版文档](https://github.com/triasteam/Trias-PKU/blob/master/README.md)   |   [English Docs](https://github.com/triasteam/Trias-PKU/blob/master/README-EN.md)
 
 ## Project Introduction   
@@ -21,4 +22,6 @@ A new generation of intelligent contract platform, development framework, and co
 <Todo>
 
 ## Contributor Contact
-Email: sacrohu@126.com
+Email:  qingnishen@ss.pku.edu.cn
+        fangyeujian@163.com
+        sacrohu@126.com
