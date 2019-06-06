@@ -1,4 +1,4 @@
-#PKUSSM-Octa Innovation Lab - Open source security community for cryptography and its blockchain applications   
+# PKUSSM-Octa Innovation Lab - Open source security community for cryptography and its blockchain applications   
 
 #### [中文版文档](https://github.com/triasteam/Trias-PKU/blob/master/README.md)   |   [English Docs](https://github.com/triasteam/Trias-PKU/blob/master/README-EN.md)
 
