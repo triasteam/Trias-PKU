@@ -25,7 +25,7 @@
 ......
 
 ## 贡献者联系方式
-Email:  qingnishen@ss.pku.edu.cn
-        fangyeujian@163.com
-        sacrohu@126.com
+Email:  qingnishen@ss.pku.edu.cn   
+        fangyeujian@163.com   
+        sacrohu@126.com   
 

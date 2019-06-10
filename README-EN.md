@@ -7,7 +7,7 @@ In July 2017, School of Software and Microelectronics, Peking University and Bei
 Collaborative Innovation Lab to collaborate on industry-university-research collaborative innovation, including joint research, technology and application innovation, and talents cultivation in areas of trusted computing, blockchain, cryptography and privacy protection. The lab will carry out school-enterprise cooperative research on technologies such as encryption algorithm optimization, proxy signature, blockchain platform security analysis, and trustworthy computing-based security protection. At the same time, The lab will cultivate high-level innovative talents in cyberspace security for the country through joint innovation practice activities.
 
 ## School of Software and Microelectronics, Peking University   
-School of Software and Microelectronics, Peking University(http://www.ss.pku.edu.cn/)  was founded in 2002, is committed to industrial and field demand, training high-level, practical, compound cross type, international talent.    
+School of Software and Microelectronics, [Peking University](http://www.ss.pku.edu.cn/)  was founded in 2002, is committed to industrial and field demand, training high-level, practical, compound cross type, international talent.    
 The Network Space Security Research Team of the Big Data Technology Laboratory of Peking University train high-level research talents majoring in cyberspace Security, and research the basic theories, methods and key technologies on the security of new distributed systems such as big data, cloud computing, internet of things, blockchain, etc. In recent years, the research team have undertaken key projects funded by NSFC, 863, Shenzhen government in fields of privacy protection, security of cloud storage, big data platform information security, operating system and virtualization security, Big Data machine learning security and privacy, and other aspects, including more than 20 state-level, provincial level, ministerial level scientific research projects, as well as more than 20 industry-science cooperation research projects with Huawei, 360, Delta Electronics, Intel, IBM, AWS, Microsoft and other enterprises. In recent years, the research team have published more than 100 papers in the field of network and information security including CCS, ASIACCS, RAID, ACSAC, ICWS, IPDPS, SecureComm, ICICS, TrustCom, COMPSAC, IPADS, CLOUD, ICC, HPCC, NPC, ISCC, and other top and famous international conferences, formatted 2 national standards, applied more than 60 patents including 3 patents authorized by the United States/Europe, registered more than 20 software copyrights, and launched 2 open source projects.   
 
 ## Octa Company   
@@ -27,6 +27,6 @@ trustworthy computing-based security protection
 .etc
 
 ## Contributor Contact
-Email:  qingnishen@ss.pku.edu.cn
-        fangyeujian@163.com
-        sacrohu@126.com
+Email:  qingnishen@ss.pku.edu.cn   
+        fangyeujian@163.com   
+        sacrohu@126.com  
