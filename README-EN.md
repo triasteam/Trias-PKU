@@ -1,10 +1,10 @@
-# PKUSSM-Octa Innovation Lab - Open source security community for cryptography and its blockchain applications   
+## PKUSSM-Beijing Octa Co. Ltd. Collaborative Innovation Lab - Open source security community for cryptography and its blockchain applications   
 
 #### [中文版文档](https://github.com/triasteam/Trias-PKU/blob/master/README.md)   |   [English Docs](https://github.com/triasteam/Trias-PKU/blob/master/README-EN.md)
 
 ## Project Introduction   
-This project, relying on the background of Peking University Soft Micro School and Octa company, makes a thorough study of cryptography related principles, and studies the security application of cryptography in block chains.
-Focus on the combination of block chain technology, improve the optimization and improvement of cryptography in the application of blockchain, and hope to carry out fruitful theoretical innovation and practical engineering optimization.
+In July 2017, School of Software and Microelectronics, Peking University and Beijing Octa Co., Ltd. jointly established School of Software and Microelectronics, Peking University - Beijing Octa Co., Ltd.    
+Collaborative Innovation Lab to collaborate on industry-university-research collaborative innovation, including joint research, technology and application innovation, and talents cultivation in areas of trusted computing, blockchain, cryptography and privacy protection. The lab will carry out school-enterprise cooperative research on technologies such as encryption algorithm optimization, proxy signature, blockchain platform security analysis, and trustworthy computing-based security protection. At the same time, The lab will cultivate high-level innovative talents in cyberspace security for the country through joint innovation practice activities.
 
 ## School of Software and Microelectronics, Peking University   
 <Todo>
@@ -19,7 +19,11 @@ After long-term research and practice, Octa have been widely recognized by coope
 A new generation of intelligent contract platform, development framework, and collaboration ecosystem that support native applications across all platforms (server, PC, mobile, Internet of things, etc.).
 
 ## Project Plan  
-<Todo>
+encryption algorithm optimization   
+proxy signature   
+blockchain platform security analysis   
+trustworthy computing-based security protection   
+.etc
 
 ## Contributor Contact
 Email:  qingnishen@ss.pku.edu.cn
