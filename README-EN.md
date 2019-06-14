@@ -20,26 +20,26 @@ After long-term research and practice, Octa have been widely recognized by coope
 A new generation of intelligent contract platform, development framework, and collaboration ecosystem that support native applications across all platforms (server, PC, mobile, Internet of things, etc.).
 
 ## Project Roadmap
-1. IPE/ABE direction, Dr Li cong, et al
-Principle discussion stage 2019.06
-Demo development stage 209.q3
-Project realization phase 209.q4
+1. IPE/ABE direction, Dr Li cong, et al    
+Principle discussion stage 2019.06    
+Demo development stage 209.q3     
+Project realization phase 209.q4     
 
-2. Directions of lattice password/proxy signature, etc. Dr Feng Xinyu, et al.
-Principle discussion stage 2019.06
-Demo Development Phase 2019.Q3
-Engineering Implementation Phase 2019.Q4
+2. Directions of lattice password/proxy signature, etc. Dr Feng Xinyu, et al.     
+Principle discussion stage 2019.06     
+Demo Development Phase 2019.Q3    
+Engineering Implementation Phase 2019.Q4    
 
-3. ECC optimization direction Dr. Dong et al.
-In-depth Study of Theory - 2019.Q4
+3. ECC optimization direction Dr. Dong et al.    
+In-depth Study of Theory - 2019.Q4     
 
-4. Direction of Password Application, Dr Hu Zhilin et al.
-Improvement, optimization and supplement of various new encryption algorithms, etc.
-Hash algorithm development 2019.06
-Development of Encryption Algorithms 2019.Q3
-Signature algorithm development 2019.Q4
+4. Direction of Password Application, Dr Hu Zhilin et al.    
+Improvement, optimization and supplement of various new encryption algorithms, etc.    
+Hash algorithm development 2019.06    
+Development of Encryption Algorithms 2019.Q3    
+Signature algorithm development 2019.Q4   
 
-5. Intelligent Contracts/Security Analysis, to be determined
+5. Intelligent Contracts/Security Analysis, to be determined    
 .etc
 
 ## Contributor Contact
