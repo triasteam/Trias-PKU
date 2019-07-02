@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-//TestOriginStealthAdressGenerate
+// TestOriginStealthAdressGenerate
 func TestOriginStealthAdressGenerate(test *testing.T) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -17,7 +17,7 @@ func TestOriginStealthAdressGenerate(test *testing.T) {
 	OriginStealthAdressGenerate(privateKeyA, privateKeyB, curveP256)
 }
 
-//TestOriginStealthAdressVerify
+// TestOriginStealthAdressVerify
 func TestOriginStealthAdressVerify(test *testing.T) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -29,7 +29,7 @@ func TestOriginStealthAdressVerify(test *testing.T) {
 	OriginStealthAdressVerify(privateKeyA, privateKeyB, P, r, curveP256)
 }
 
-//BenchOriginStealthAdressGenerate
+// BenchOriginStealthAdressGenerate
 func BenchmarkOriginStealthAdressGenerate(b *testing.B) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -50,7 +50,7 @@ func BenchmarkOriginStealthAdressGenerate(b *testing.B) {
 	}
 }
 
-//BenchOriginStealthAdressVerify
+// BenchOriginStealthAdressVerify
 func BenchmarkOriginStealthAdressVerify(b *testing.B) {
 	//global params
 	var curveP256 = elliptic.P256()
