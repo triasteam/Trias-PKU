@@ -9,6 +9,8 @@ import (
 	"math/big"
 )
 
+//OriginStealthAdressGenerate
+//generate the Stealth Address with privateKey A and B
 func OriginStealthAdressGenerate(privateKeyA *ecdsa.PrivateKey, privateKeyB *ecdsa.PrivateKey,
 	curveP256 elliptic.Curve) (*big.Int, *ecdsa.PrivateKey) {
 	//generate Stealth Address
@@ -26,9 +28,10 @@ func OriginStealthAdressGenerate(privateKeyA *ecdsa.PrivateKey, privateKeyB *ecd
 	return P, privateKeyR
 }
 
+//OriginStealthAdressVerify
+//verify the Stealth Address with P and R
 func OriginStealthAdressVerify(privateKeyA *ecdsa.PrivateKey, privateKeyB *ecdsa.PrivateKey,
 	P *big.Int, privateKeyR *ecdsa.PrivateKey, curveP256 elliptic.Curve) {
-	//verify Stealth Address
 	px, py := curveP256.ScalarMult(privateKeyR.PublicKey.X, privateKeyR.PublicKey.Y, privateKeyA.D.Bytes()) //mR
 
 	HashP := sha256.Sum256(append(px.Bytes(), py.Bytes()...))

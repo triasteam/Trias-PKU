@@ -7,6 +7,7 @@ import (
 	"testing"
 )
 
+//TestOriginStealthAdressGenerate
 func TestOriginStealthAdressGenerate(test *testing.T) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -16,6 +17,7 @@ func TestOriginStealthAdressGenerate(test *testing.T) {
 	OriginStealthAdressGenerate(privateKeyA, privateKeyB, curveP256)
 }
 
+//TestOriginStealthAdressVerify
 func TestOriginStealthAdressVerify(test *testing.T) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -27,6 +29,7 @@ func TestOriginStealthAdressVerify(test *testing.T) {
 	OriginStealthAdressVerify(privateKeyA, privateKeyB, P, r, curveP256)
 }
 
+//BenchOriginStealthAdressGenerate
 func BenchmarkOriginStealthAdressGenerate(b *testing.B) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -34,11 +37,11 @@ func BenchmarkOriginStealthAdressGenerate(b *testing.B) {
 	var privateKeyA, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
 	var privateKeyB, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
 
-	// 重置计时器
+	//reset timer
 	b.ResetTimer()
-	// 停止计时器
+	//stop timer
 	b.StopTimer()
-	// 开始计时器
+	//start timer
 	b.StartTimer()
 	var n int
 	for i := 0; i < b.N; i++ {
@@ -47,6 +50,7 @@ func BenchmarkOriginStealthAdressGenerate(b *testing.B) {
 	}
 }
 
+//BenchOriginStealthAdressVerify
 func BenchmarkOriginStealthAdressVerify(b *testing.B) {
 	//global params
 	var curveP256 = elliptic.P256()
@@ -55,11 +59,11 @@ func BenchmarkOriginStealthAdressVerify(b *testing.B) {
 	var privateKeyB, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
 	P, r := OriginStealthAdressGenerate(privateKeyA, privateKeyB, curveP256)
 
-	// 重置计时器
+	//reset timer
 	b.ResetTimer()
-	// 停止计时器
+	//stop timer
 	b.StopTimer()
-	// 开始计时器
+	//start timer
 	b.StartTimer()
 	var n int
 	for i := 0; i < b.N; i++ {
