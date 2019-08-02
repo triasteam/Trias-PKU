@@ -18,21 +18,22 @@ TriasBlake2b_256 | a2d558398e6c3465312a38fe56bd570f0659b417c2da8d38bdd5d0f265256
 TriasBlake2b_384 | ba61e8bd6d1b494f494120be9f7ab7903c25930d06715e01c16c350bbfe74d4f49e83efc78d4a5f4c528b525fea92a6f   
 TriasBlake2b_512 | c99b03d4b829ffbaac218a26f16575661d2dd09e8d45efcaff09346557df19303eb75140c86724010cd52878bc95d4c68f11941dbadba39ecf57019544fef9ce   
 
-性能测试结果   
-BenchmarkTriasMd5                5000000               284 ns/op   
-BenchmarkTriasSha1               5000000               335 ns/op    
-BenchmarkTriasSha224             3000000               422 ns/op   
-BenchmarkTriasSha256             3000000               431 ns/op   
-BenchmarkTriasSha512224          3000000               515 ns/op   
-BenchmarkTriasSha512256          3000000               514 ns/op   
-BenchmarkTriasSha512384          3000000               544 ns/op   
-BenchmarkTriasSha512512          3000000               584 ns/op   
-BenchmarkTriasRipemd160          2000000               734 ns/op   
-BenchmarkTriasSHA3_224           2000000               973 ns/op   
-BenchmarkTriasSHA3_256           2000000               978 ns/op   
-BenchmarkTriasSHA3_384           2000000               957 ns/op   
-BenchmarkTriasSHA3_512           2000000               955 ns/op   
-BenchmarkTriasBlake2s_256        5000000               349 ns/op   
-BenchmarkTriasBlake2b_256        3000000               404 ns/op   
-BenchmarkTriasBlake2b_384        3000000               436 ns/op   
-BenchmarkTriasBlake2b_512        3000000               462 ns/op   
+hash方法 | 测试次数 | 性能测试结果   
+-|-|-
+BenchmarkTriasMd5           |     5000000      |         284 ns/op   
+BenchmarkTriasSha1          |     5000000      |         335 ns/op    
+BenchmarkTriasSha224        |     3000000      |         422 ns/op   
+BenchmarkTriasSha256        |     3000000      |         431 ns/op   
+BenchmarkTriasSha512224     |     3000000      |         515 ns/op   
+BenchmarkTriasSha512256     |     3000000      |         514 ns/op   
+BenchmarkTriasSha512384     |     3000000      |         544 ns/op   
+BenchmarkTriasSha512512     |     3000000      |         584 ns/op   
+BenchmarkTriasRipemd160     |     2000000      |         734 ns/op   
+BenchmarkTriasSHA3_224      |     2000000      |         973 ns/op   
+BenchmarkTriasSHA3_256      |     2000000      |         978 ns/op   
+BenchmarkTriasSHA3_384      |     2000000      |         957 ns/op   
+BenchmarkTriasSHA3_512      |     2000000      |         955 ns/op   
+BenchmarkTriasBlake2s_256   |     5000000      |         349 ns/op   
+BenchmarkTriasBlake2b_256   |     3000000      |         404 ns/op   
+BenchmarkTriasBlake2b_384   |     3000000      |         436 ns/op   
+BenchmarkTriasBlake2b_512   |     3000000      |         462 ns/op   
