@@ -1,0 +1,3 @@
+[submodule "vulnerability/kunpeng"]
+	path = vulnerability/kunpeng
+	url = https://github.com/opensec-cn/kunpeng
