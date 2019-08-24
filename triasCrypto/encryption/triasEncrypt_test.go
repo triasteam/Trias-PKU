@@ -26,9 +26,36 @@ func TestTriasCBCEncrypt(test *testing.T) {
     fmt.Println("CBC ciphertext - ", ciphertext, len(ciphertext))
 }
 
+func BenchmarkTriasCBCEncrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasCBCEncrypt(passward, plaintext)
+    }
+}
+
 func TestTriasCBCDecrypt(test *testing.T) {
     plaintext = triasCBCDecrypt(passward, ciphertext)
     fmt.Println("CBC plaintext  - ", plaintext)
+}
+
+func BenchmarkTriasCBCDecrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasCBCEncrypt(passward, plaintext)
+        plaintext = triasCBCDecrypt(passward, ciphertext)
+    }
 }
 
 func TestTriasCFBEncrypt(test *testing.T) {
