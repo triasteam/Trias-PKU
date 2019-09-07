@@ -23,7 +23,8 @@ func triasGCMEncrypt(key []byte, plaintext []byte) ([]byte, []byte) {
         panic(err.Error())
     }
 
-    ciphertext := aesgcm.Seal(nil, nonce, plaintext, nil)
+    origData := PKCS5Padding(plaintext, block.BlockSize())
+    ciphertext := aesgcm.Seal(nil, nonce, origData, nil)
 
     return ciphertext, nonce
 }
@@ -43,6 +44,6 @@ func triasGCMDecrypt(key []byte, ciphertext []byte, nonce []byte) []byte {
         panic(err.Error())
     }
 
-    return plaintext
+    return PKCS5UnPadding(plaintext)
 }
 

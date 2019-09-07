@@ -5,6 +5,8 @@ import (
     "testing"
     "encoding/hex"
     "crypto/aes"
+    "crypto/rand"
+    "crypto/ecdsa"
 )
 
 var passward, _  = hex.DecodeString("6368616e676520746869732070617373")
@@ -63,9 +65,36 @@ func TestTriasCFBEncrypt(test *testing.T) {
     fmt.Println("CFB ciphertext - ", ciphertext, len(ciphertext))
 }
 
+func BenchmarkTriasCFBEncrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasCFBEncrypt(passward, plaintext)
+    }
+}
+
 func TestTriasCFBDecrypt(test *testing.T) {
     plaintext = triasCFBDecrypt(passward, ciphertext)
     fmt.Println("CFB plaintext  - ", plaintext)
+}
+
+func BenchmarkTriasCFBDecrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasCFBEncrypt(passward, plaintext)
+        plaintext = triasCFBDecrypt(passward, ciphertext)
+    }
 }
 
 func TestTriasCTREncrypt(test *testing.T) {
@@ -73,9 +102,36 @@ func TestTriasCTREncrypt(test *testing.T) {
     fmt.Println("CTR ciphertext - ", ciphertext, len(ciphertext))
 }
 
+func BenchmarkTriasCTREncrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasCTREncrypt(passward, plaintext)
+    }
+}
+
 func TestTriasCTRDecrypt(test *testing.T) {
     plaintext = triasCTRDecrypt(passward, ciphertext)
     fmt.Println("CTR plaintext  - ", plaintext)
+}
+
+func BenchmarkTriasCTRDecrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasCTREncrypt(passward, plaintext)
+        plaintext = triasCTRDecrypt(passward, ciphertext)
+    }
 }
 
 func TestTriasOFBEncrypt(test *testing.T) {
@@ -83,9 +139,36 @@ func TestTriasOFBEncrypt(test *testing.T) {
     fmt.Println("OFB ciphertext - ", ciphertext, len(ciphertext))
 }
 
+func BenchmarkTriasOFBEncrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasOFBEncrypt(passward, plaintext)
+    }
+}
+
 func TestTriasOFBDecrypt(test *testing.T) {
     plaintext = triasOFBDecrypt(passward, ciphertext)
     fmt.Println("OFB plaintext  - ", plaintext)
+}
+
+func BenchmarkTriasOFBDecrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext = triasOFBEncrypt(passward, plaintext)
+        plaintext = triasOFBDecrypt(passward, ciphertext)
+    }
 }
 
 func TestTriasGCMEncrypt(test *testing.T) {
@@ -94,8 +177,110 @@ func TestTriasGCMEncrypt(test *testing.T) {
     fmt.Println("GCM nonce - ", nonce)
 }
 
+func BenchmarkTriasGCMEncrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext, nonce = triasGCMEncrypt(passward, plaintext)
+    }
+}
+
 func TestTriasGCMDecrypt(test *testing.T) {
     plaintext = triasGCMDecrypt(passward, ciphertext, nonce)
     fmt.Println("GCM plaintext  - ", plaintext)
 }
 
+func BenchmarkTriasGCMDecrypt(b *testing.B) {
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext, nonce = triasGCMEncrypt(passward, plaintext)
+        plaintext = triasGCMDecrypt(passward, ciphertext, nonce)
+    }
+}
+
+func TestTriasDHShareKey(test *testing.T) {
+    var privateLocal, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    var privatePartner, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    publicPartner := privatePartner.Public().(*ecdsa.PublicKey)
+    publicLocal := privateLocal.Public().(*ecdsa.PublicKey)
+    secretKey := triasDHShareKey(publicPartner, privateLocal)
+    fmt.Println("DH secretKey 1- ", secretKey, len(secretKey))
+    secretKey = triasDHShareKey(publicLocal, privatePartner)
+    fmt.Println("DH secretKey 2- ", secretKey, len(secretKey))
+}
+
+func BenchmarkTriasDHShareKey(b *testing.B) {
+    var privateLocal, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    var privatePartner, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    publicPartner := privatePartner.Public().(*ecdsa.PublicKey)
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        triasDHShareKey(publicPartner, privateLocal)
+    }
+}
+
+func TestTriasDHEncrypt(test *testing.T) {
+    var privatePartner, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    publicPartner := privatePartner.Public().(*ecdsa.PublicKey)
+
+    ciphertext, publicLocal := triasDHEncrypt(publicPartner, plaintext)
+    fmt.Println("DH CTR ciphertext - ", ciphertext, len(ciphertext))
+    fmt.Println("DH publicLocal - ", publicLocal)
+}
+
+func BenchmarkTriasDHEncrypt(b *testing.B) {
+    var privatePartner, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    publicPartner := privatePartner.Public().(*ecdsa.PublicKey)
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        triasDHEncrypt(publicPartner, plaintext)
+    }
+}
+
+func TestTriasDHDecrypt(test *testing.T) {
+    var privatePartner, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    publicPartner := privatePartner.Public().(*ecdsa.PublicKey)
+
+    ciphertext, publicLocal := triasDHEncrypt(publicPartner, plaintext)
+    plaintext = triasDHDecrypt(publicLocal, ciphertext, privatePartner)
+    fmt.Println("DH CTR plaintext - ", plaintext, len(plaintext))
+}
+
+func BenchmarkTriasDHDecrypt(b *testing.B) {
+    var privatePartner, _ = ecdsa.GenerateKey(curveP256, rand.Reader)
+    publicPartner := privatePartner.Public().(*ecdsa.PublicKey)
+    //reset timer
+    b.ResetTimer()
+    //stop timer
+    b.StopTimer()
+    //start timer
+    b.StartTimer()
+
+    for i := 0; i < b.N; i++ {
+        ciphertext, publicLocal := triasDHEncrypt(publicPartner, plaintext)
+        plaintext = triasDHDecrypt(publicLocal, ciphertext, privatePartner)
+    }
+}
