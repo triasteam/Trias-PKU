@@ -18,8 +18,8 @@ func TestCreateVerifyShieldAddr(test *testing.T) {
     isAddress := VerifyShieldAddr(privateView, publicSpend, publicShieldP, publicShieldR)
     privateStealth := GetprivateStealth(privateView, privateSpend, publicShieldR)
 
-    fmt.Println("View ", privateView.D.Bytes(), "\n", publicView)
-    fmt.Println("Spend", privateSpend.D.Bytes(), "\n", publicSpend)
+    fmt.Println("View ", privateView.D, "\n", publicView)
+    fmt.Println("Spend", privateSpend.D, "\n", publicSpend)
     fmt.Println("Stealth", publicShieldP, "\nR", publicShieldR)
     fmt.Println(isAddress)
     fmt.Println("Stealth", privateStealth)
